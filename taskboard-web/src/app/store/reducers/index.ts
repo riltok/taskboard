@@ -8,14 +8,18 @@ import {
 
 // import * as fromBoard from './board';
 import * as fromColumn from './column';
+import * as fromTask from './task';
+import {Task} from "../../core/model/task";
 
 export interface State {
   columns: fromColumn.State;
+  tasks: fromTask.State;
 }
 
 export const reducers: ActionReducerMap<State> = {
   // todo что это, почему не column?
-  columns: fromColumn.reducer
+  columns: fromColumn.reducer,
+  tasks: fromTask.reducer
 };
 
 
@@ -32,8 +36,15 @@ export const metaReducers: MetaReducer<State>[] = [logger];
 
 export const getColumnState = createFeatureSelector<fromColumn.State>('columns');
 
-export const getCOlumns = createSelector(
+export const getColumns = createSelector(
   getColumnState,
   fromColumn.getColumns,
+);
+
+export const getTaskState = createFeatureSelector<fromTask.State>('tasks');
+
+export const getTasks = createSelector(
+  getTaskState,
+  fromTask.getTasks,
 );
 

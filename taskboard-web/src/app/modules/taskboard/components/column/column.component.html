@@ -1,0 +1,6 @@
+<div class="column">
+  <column-header [column]="column"></column-header>
+  <div class="task-container">
+    <task *ngFor="let id of column.taskIds" [task]="tasks[id]"></task>
+  </div>
+</div>

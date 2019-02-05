@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
-import {AddColumn} from '../../../store/actions/column';
-import {State} from '../../../store/reducers';
+import {AddColumn} from '../../../../store/actions/column';
+import {State} from '../../../../store/reducers';
 
 @Component({
   selector: 'app-add-column',

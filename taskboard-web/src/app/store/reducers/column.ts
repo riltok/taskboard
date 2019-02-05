@@ -1,6 +1,6 @@
 import * as columnAction from '../actions/column';
-import {Column} from '../../model/column';
-import {Task} from '../../model/task';
+import {Column} from '../../core/model/column';
+import {Task} from '../../core/model/task';
 
 export interface State {
   columns: Column[];
@@ -11,28 +11,13 @@ export const initialState: State = {
     {
       name: '1322',
       id: 5,
-      taskIds: []
+      taskIds: [1, 3]
     },
     {
       name: '1322',
       id: 5,
-      taskIds: []
+      taskIds: [2]
     }
-    // {
-    //   name: '1322',
-    //   id: 5,
-    //   taskIds: []
-    // },
-    // {
-    //   name: '1322',
-    //   id: 5,
-    //   taskIds: []
-    // },
-    // {
-    //   name: '1322',
-    //   id: 5,
-    //   taskIds: []
-    // }
   ]
 };
 
