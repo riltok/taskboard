@@ -34,8 +34,9 @@ export function reducer(state = initialState,
   switch (action.type) {
     case taskAction.ADD_ONE: {
       const newTask: Task = new Task();
-      newTask.name = '' + action.payload;
+      newTask.name = action.payload.name;
       newTask.id = ++countIds;
+      action.payload.column.taskIds.push(newTask.id);
       return {
         ...state,
         tasks: {

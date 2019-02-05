@@ -3,4 +3,5 @@
   <div class="task-container">
     <task *ngFor="let id of column.taskIds" [task]="tasks[id]"></task>
   </div>
+  <adding-task [column]="column"></adding-task>
 </div>

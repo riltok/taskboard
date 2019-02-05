@@ -5,17 +5,19 @@ import {CommonModule} from "@angular/common";
 import {MaterialModule} from '../../material.module';
 import {BoardComponent} from './components/board/board.component';
 import {ColumnComponent} from './components/column/column.component';
-import {AddColumnComponent} from './components/add-column/add-column.component';
+import {AddingColumnComponent} from './components/adding-column/adding-column.component';
 import {TaskComponent} from './components/task/task.component';
-import { ColumnHeaderComponent } from './components/column-header/column-header.component';
+import {ColumnHeaderComponent} from './components/column-header/column-header.component';
+import {AddingTaskComponent} from './components/adding-task/adding-task.component';
 
 @NgModule({
   declarations: [
     BoardComponent,
     ColumnComponent,
-    AddColumnComponent,
+    AddingColumnComponent,
     TaskComponent,
     ColumnHeaderComponent,
+    AddingTaskComponent,
   ],
   imports: [
     CoreModule,
@@ -23,4 +25,5 @@ import { ColumnHeaderComponent } from './components/column-header/column-header.
     MaterialModule,
   ]
 })
-export class TaskboardModule { }
+export class TaskboardModule {
+}

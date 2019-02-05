@@ -4,11 +4,11 @@ import {AddColumn} from '../../../../store/actions/column';
 import {State} from '../../../../store/reducers';
 
 @Component({
-  selector: 'app-add-column',
-  templateUrl: './add-column.component.html',
-  styleUrls: ['./add-column.component.sass']
+  selector: 'adding-column',
+  templateUrl: './adding-column.component.html',
+  styleUrls: ['./adding-column.component.sass']
 })
-export class AddColumnComponent implements OnInit {
+export class AddingColumnComponent implements OnInit {
 
   toggle: boolean;
 
@@ -21,7 +21,7 @@ export class AddColumnComponent implements OnInit {
   addColumn(name: string): void {
     if (name !== '') {
       this.toggle = false;
-      this.store.dispatch(new AddColumn(name));
+      this.store.dispatch(new AddColumn({name: name}));
     }
   }
 

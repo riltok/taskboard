@@ -27,7 +27,7 @@ export function reducer(state = initialState,
   switch (action.type) {
     case columnAction.ADD_ONE: {
       const newColumn: Column = new Column();
-      newColumn.name = action.payload;
+      newColumn.name = action.payload.name;
       return {
         ...state,
         columns: [...state.columns, newColumn]

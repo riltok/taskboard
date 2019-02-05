@@ -1,4 +1,5 @@
 import { Action } from '@ngrx/store';
+import {Column} from "../../core/model/column";
 
 export const SELECT = '[Task] Select';
 export const ADD_ONE = '[Task] Add One';
@@ -9,10 +10,10 @@ export class Select implements Action {
   constructor(public payload: number) { }
 }
 
-export class AddOne implements Action {
+export class AddTask implements Action {
   readonly type = ADD_ONE;
 
-  constructor(public payload: String) { }
+  constructor(public payload: {name: string, column: Column}) { }
 }
 
-export type Action = AddOne | Select;
+export type Action = AddTask | Select;
